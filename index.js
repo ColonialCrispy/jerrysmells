@@ -7,10 +7,11 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 const guildArray = client.guilds.map((guild) => {
     return `${guild.name} ${guild.memberCount}`;
 })
-
+)
 client.on ("ready", () => {
     console.log ("Colonial >.<")
     client.user.setActivity (`${client.guilds.size} guilds | c!fun` )
+    client.user.setAvatar("https://cdn.discordapp.com/attachments/463426578135908352/464452110713487370/planet-artist.jpg")
     
 
     answered = true;
